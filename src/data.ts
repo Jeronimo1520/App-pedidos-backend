@@ -60,5 +60,20 @@ export const comida_ejemplos: any[] = [
       etiquetas: ['medicamentos', 'farmacia', 'gripa'],
       local: 'La rebajita'
   
-     }
+     },
+
+ 
+   //   id:'6',
+   //   nombre: 'Antigripales',
+   //   tiempo: '10 mins',
+   //   precio: 5000,
+   //   favorito: true,
+   //   estrellas: 2.5,
+   //   imagenUrl: 'assets/pastillas.jpg',
+   //   etiquetas: ['medicamentos', 'farmacia', 'gripa'],
+   //   local: 'La rebajita'
+   //   }
+ 
+    
+
 ]
