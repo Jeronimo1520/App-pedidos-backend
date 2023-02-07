@@ -1,4 +1,5 @@
 import mongoose, {connect, ConnectOptions} from 'mongoose';
+require('dotenv').config();
 mongoose.set('strictQuery', false)
 export const dbConnect = ()=>{
     connect(process.env.MONGO_URI!, {

@@ -62,18 +62,22 @@ export const comida_ejemplos: any[] = [
   
      },
 
- 
-   //   id:'6',
-   //   nombre: 'Antigripales',
-   //   tiempo: '10 mins',
-   //   precio: 5000,
-   //   favorito: true,
-   //   estrellas: 2.5,
-   //   imagenUrl: 'assets/pastillas.jpg',
-   //   etiquetas: ['medicamentos', 'farmacia', 'gripa'],
-   //   local: 'La rebajita'
-   //   }
- 
-    
-
 ]
+
+export const usuarios_ejemplos: any[] = [
+   {
+     nombre: "Jeronimo Bedoya",
+     email: "jero@gmail.com",
+     password: "12345",
+     direccion: "Calle 28",
+     ciudad: "Medellin An"
+   },
+   {
+     name: "Paulina Saldarriaga",
+     email: "pau@gmail.com",
+     password: "12345",
+     direccion: "Calle 26",
+     ciudad: "Medellin An"
+
+   },
+ ];
