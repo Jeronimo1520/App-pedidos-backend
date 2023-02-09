@@ -67,14 +67,15 @@ export const comida_ejemplos: any[] = [
 export const usuarios_ejemplos: any[] = [
    {
      nombre: "Jeronimo Bedoya",
-     email: "jero@gmail.com",
+     correo: "jero@gmail.com",
      password: "12345",
      direccion: "Calle 28",
      ciudad: "Medellin An"
    },
+   
    {
-     name: "Paulina Saldarriaga",
-     email: "pau@gmail.com",
+     nombre: "Paulina Saldarriaga",
+     correo: "pau@gmail.com",
      password: "12345",
      direccion: "Calle 26",
      ciudad: "Medellin An"

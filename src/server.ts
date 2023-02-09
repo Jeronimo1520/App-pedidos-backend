@@ -1,10 +1,10 @@
 import dotenv from 'dotenv'
 import express from 'express'; 
 import cors from "cors";
-import { comida_ejemplos, usuarios_ejemplos } from './data';
 import comidaRouter from './routers/comida.router';
 import { dbConnect } from './configs/database.config';
-import jwt from "jsonwebtoken"
+import usuarioRouter from './routers/usuario.router';
+
 
 dbConnect();
 dotenv.config();
@@ -20,32 +20,15 @@ app.use(cors({
 
 
 app.use("/api/comidas",comidaRouter)
+app.use("/api/usuarios", usuarioRouter)
 
-app.post("/api/usuarios/login", (req,res) =>{
-    const {email,password} = req.body;
-    const usuario = usuarios_ejemplos.find(usuario => usuario.email === email &&
-        usuario.password === password)
-    
-        if(usuario){
-            res.send(generateTokenResponse(usuario))
-        }else{
-            res.status(400).send("Correo o contraseña no son validos")
-        }
-})
-
-const generateTokenResponse = (usuario:any)=>{
-    const token = jwt.sign({
-        email:usuario.email
-    },"textoRandom",{
-        expiresIn:"30d"
-    });
-
-    usuario.token = token;
-    return usuario;
-}
 
 const port = 5000;
 
 app.listen(port, ()=>{
     console.log("Website served on http://localhost:" + port);
 })
+
+function asyncHandler(arg0: (req: any, res: any) => Promise<void>): import("express-serve-static-core").RequestHandler<{}, any, any, import("qs").ParsedQs, Record<string, any>> {
+    throw new Error('Function not implemented.');
+}
